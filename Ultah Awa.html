@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday AWAA</title>
+</head>
+<style>
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+   } 
+   section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background-color: #a4ccef;
+   }
+   .container {
+    position: relative;
+    width: calc(100% - 100px);
+    min-height: calc(100% - 200px);
+    min-height: 300px;
+    background-color: rgba(225, 225, 255, 0.5);
+    box-shadow: 0 115px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+   }
+   header{
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    left: 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 15ox 35px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 225, 255, 0.25);
+    border-top: 1px solid rgba(225, 225, 255, 0.5);
+    border-left: 1px solid rgba(225, 225, 255, 0.5);
+   }
+   header.logo{
+    color: #1f71a1;
+    font-weight: 700;
+    text-decoration: none;
+    font-size:2em;
+   }
+   header ul{
+    display: flex;
+   }
+   header ul li {
+    list-style: none;
+    margin: 0 10px;
+   }
+   header ul li a {
+    text-decoration: none;
+    color: #1f71a1;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 25px;
+   }
+   header ul li a:hover,
+   header ul li a.active {
+    background-color: aliceblue;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.01);
+   }
+   .content {
+    transform: translateX(-100px);
+    max-width: 700px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 225, 255, 0.25);
+    border-top: 1px solid rgba(225, 225, 255, 0.5);
+    border-left: 1px solid rgba(225, 225, 255, 0.5);
+    padding: 40 px;
+    padding-left: 110px;
+   }
+   .content h2{
+    padding-bottom: 10px;
+    font-size: 3em;
+    color: #1f71a1;
+   }
+   .content p{
+    font-size: 1.2em;
+    color: #1f71a1;
+   }
+   .content a{
+    display: inline-block;
+    padding: 10pc 30px;
+    background-color: #fff;
+    color: #1f71a1;
+    margin-top: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.01);
+   }
+   .imgBox img {
+    width: 500px; /* Sesuaikan ukuran kotak sesuai kebutuhan */
+    height: 500px; /* Sesuaikan ukuran kotak sesuai kebutuhan */
+    border-radius: 50%; /* Ini akan membuat kotak gambar menjadi bulat */
+    overflow: hidden; /* Ini akan memastikan gambar sesuai dengan bentuk bulat */
+    animation: animate 5s linear infinite;
+   } 
+   .imgBox img{
+    width: 100%; /* Memastikan gambar mengisi kotak dengan benar */
+    height: auto; /* Untuk menjaga aspek rasio gambar */
+    display: block; /* Memastikan gambar tampil dengan benar di dalam kotak */
+   }
+   @keyframes animate{
+    0%,
+    100% {
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+   }
+   .icon {
+    position: absolute;
+    right: -25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   }
+   .icon li {
+    list-style: none;
+   }
+   .icon li a{
+    text-decoration: none;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+   }
+   .icon li a img {
+    width: 30px;
+    transform: scale(0.7);
+    transition: 0.5s;
+   }
+   .icon li:hover a img{
+    transform: scale(0.7) rotate(300deg);
+   }
+   @media screen and (max-width: 120px){
+    .container {
+        position: relative;
+        width: calc(100% - 20%);
+    }
+   }
+   @media screen and (max-width: 992px){
+    section {
+        padding: 50px 10px 10px;
+    }
+    .container{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .container .content {
+        transform: translateX(0px);
+        max-width: 100%;
+        margin-top: -20px;
+        padding: 30px;
+    }
+    header{
+        position :relative;
+        flex-direction: column;
+        width: 100%;
+        top: -40px;
+        padding: 20px;
+        right: 0;
+        left: 0;
+    }
+    header ul{
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header ul li {
+        margin:  3px;
+    }
+    header ul li a{
+        display: inline-block;
+        font-size: 1em;
+    }
+    .imgBox {
+        margin-bottom:  50px;
+    }
+    .content a{
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    @keyframes animate {
+        0%,
+        100%{
+            transform: translateY(10px);
+        }
+        50%{
+            transform: translateY(30px);
+        }
+    }
+    .icon {
+        position: relative;
+        flex-direction: row;
+        left: 0;
+    }
+    .icon li a {
+        margin: 0 10px;
+    }
+   }
+
+   @media  screen and (max-width: 600px){
+    .container .content {
+        margin-top: -30px;
+    }
+    .content h2{
+        font-size: 2em;
+    }
+    .content p {
+        font-size: 0.7em;
+    
+    }
+    .imgBox img{
+        max-width: 300px;
+    }
+    .icon li a {
+        width: 35px;
+        height: 35px;
+    }
+   }
+</style>
+<body>
+    <section>
+        <div class="container">
+            <header>
+                <a href="#" class="logo" style="font-family: Poppins;">My Portofolio</a>
+                    <ul>
+                        <li><a href="Ultah Awa.html" class="active">Home</a></li>
+                        <li><a href="kartu ucapan.html">Kartu Ucapan</a></li>
+                        <li><a href="all picture.html">All Picture</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                    </ul>
+            </header>
+            <div class="content">
+                <h2>Hello !! Her Name Is Awa</h2>
+                <p>HAPPY BIRTH DAY MYGIRL</p>
+                <a href="bersamamu.html">CLICK DISINI YA</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="awa.jpg" alt="...">
+            </div>
+
+            <ul class="icon">
+                <li><a href="https://instagram.com/awaana25?igshid=OGQ5ZDc2ODk2ZA=="><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg></a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                  </svg></a></li>
+                <li><a href="https://www.tiktok.com/@awaana25?_t=8i3tcN5SF55&_r=1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                  </svg></a></li>
+            </ul>
+
+            <div class="notes"></div>
+        </div>
+    </section>
+</body>
+</html>
